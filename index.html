@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>CHASA - Physique P2</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/sky.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section class="center">
+            <h2> Cours 2 etoiles </h2>
+            <h3> Physique </h3>
+        </section>
+        <section>
+            <h2>Table des matières</h2>
+            <ul style="margin-top: 5%;">
+                <li class="fragment grow">Composition de l'air</li>
+                <li>Loi de Dalton</li>
+                <li>Loi de Henry</li>
+                <li>La lumière</li>
+                <li>Cas pratique</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Composition de l'air</h3>
+            <div class="fragment" data-airchart="true">
+                <div style="margin: auto;" id="chart-air"></div>
+            </div>
+            <div class="fragment">
+                <p>Nous simplifierons en considérant que l'air est composé de <b>20% d'O₂</b> et <b>80% de N₂</b></p>
+            </div>
+        </section>
+        <section>
+            <h2>Table des matières</h2>
+            <ul style="margin-top: 5%;">
+                <li>Composition de l'air</li>
+                <li style="transform: scale(1.3);">Loi de Dalton</li>
+                <li>Loi de Henry</li>
+                <li>La lumière</li>
+                <li>Cas pratique</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Loi de Dalton</h3>
+            <div class="fragment" data-fragment-index="1" style="width: 100%; text-align: left;">
+                <p>1 litre d'air contient 80% d'azote et 20% d'oxygène</p>
+                <p class="fragment" data-fragment-index="2">Quelle est sa pression totale à la pression
+                    atmosphérique ? <span class="fragment" data-fragment-index="3"><b>1 bar</b></span></p>
+                <span class="fragment" data-fragment-index="4">
+                    <p> Quelle est la pression partielle d'Azote ? <span class="fragment" data-fragment-index="5"><b>0.8 bar</b></span></p>
+                    <p> Quelle est la pression partielle d'Oxygène ? <span class="fragment" data-fragment-index="5"><b>0.2 bar</b></span></p>
+                </span>
+            </div>
+        </section>
+
+        <section style="">
+            <h3>Loi de Dalton</h3>
+            <p style="text-align: left;">Enoncé de la loi:</p>
+            <blockquote style="text-align: left;width: 100%">"A température constante, la pression absolue d'un mélange
+                gazeux est égale à la somme des
+                pressions partielles qu'auraient ces gaz s'ils occupaient seuls le volume total"
+            </blockquote>
+            <div class="fragment" style="text-align: left;">
+                <p>Formules: </p>
+                <blockquote>
+                    <p>$P _{tot} = P_{g1} + P_{g2} + ... + P_{gn}$</p>
+                    <p>$P _{Pgaz} = P_{abs} * \%_{gaz}$</p>
+                </blockquote>
+
+            </div>
+        </section>
+
+        <section>
+            <h3>Loi de Dalton</h3>
+            <p style="text-align: left;">Soit un mélange d'air (80/20), quels sont les pressions partielles des gaz aux
+                profondeurs données ?</p>
+            <table style="margin-bottom: 20px;">
+                <thead>
+                <tr>
+                    <th>Profondeur</th>
+                    <th>Pression totale</th>
+                    <th>Pression Azote</th>
+                    <th>Pression Oxygène</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>10 m</td>
+                    <td><span class="fragment" data-fragment-index="1">2 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="1">1.6 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="1">0.4 bar</span></td>
+                </tr>
+                <tr>
+                    <td>30 m</td>
+                    <td><span class="fragment" data-fragment-index="2">4 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="2">3.2 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="2">0.8 bar</span></td>
+                </tr>
+                <tr>
+                    <td>40 m</td>
+                    <td><span class="fragment" data-fragment-index="3">5 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="3">4 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="3">1 bar</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h3>Loi de Dalton</h3>
+            <p style="text-align: left;">Quels sont les conséquences pour le plongeur ?</p>
+            <ul class="fragment">
+                <li>pour l'azote, narcose à partir de $PP_{N2} = $&nbsp;<b>3.2 bars</b></li>
+                <li>pour l'oxygène, hyperoxie à partir de $PP_{O2} = $&nbsp;<b>1.6 bar</b></li>
+                <li>pour le dioxyde de carbone, essouflement à partir de $PP_{CO2} = $&nbsp;<b>0.02 bar</b></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Table des matières</h2>
+            <ul style="margin-top: 5%;">
+                <li>Composition de l'air</li>
+                <li>Loi de Dalton</li>
+                <li style="transform: scale(1.3);">Loi de Henry</li>
+                <li>La lumière</li>
+                <li>Cas pratique</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Loi de Henry</h3>
+            <p>Quand un gaz est mis en présence d'un liquide, il se produit un phénomène de dissolution.</p>
+            <div style="display: inline-block">
+                <img src="images/bubble-gaz.png"/>
+            </div>
+        </section>
+        <section>
+            <h3>Loi de Henry</h3>
+            <div style="display: inline-block">
+                <p>La quantité de gaz dissoute dans un liquide dépend de plusieurs critères: </p>
+                <ul>
+                    <li>La pression</li>
+                    <li>la surface</li>
+                    <li>le temps</li>
+                    <li>la température</li>
+                    <li>la nature du liquide</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h3>Loi de Henry</h3>
+            <p>Que se passe-t-il lorsque l'on débouche une bouteille d'eau gazeuse ? </p>
+            <span style="margin-bottom: 20px; display: inline-block;">
+                <img style="height: 400px;" src="images/bubble-bottle.png"/>
+            </span>
+        </section>
+        <section>
+            <h3>Loi de Henry</h3>
+            <p>Quelques notions: </p>
+            <ul>
+                <li>La <b>pression</b> est la force exercée par un gaz à la surface d'un liquide</li>
+                <li>La <b>tension</b> est la quantité de gaz dissoute dans un liquide</li>
+                <li>Le <b>gradient</b> est la différence entre la pression et la tension</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Loi de Henry</h3>
+            <p>Les différents états d'un liquide: </p>
+            <img style="height: 400px;" src="images/henry-state.png"/>
+        </section>
+        <section>
+            <h3>Loi de Henry</h3>
+            <p style="text-align: left;">Enoncé de la loi:</p>
+            <blockquote style="text-align: left;width: 100%">"A température constante et à saturation, la quantité d'un
+                gaz donné dissoute dans un liquide donné est directement proportionnelle à la pression exercée par le
+                gaz à la surface du liquide."
+            </blockquote>
+        </section>
+        <section>
+            <h3>Loi de Henry</h3>
+            <p style="text-align: left;">Le processus de saturation (et de désaturation) prend du temps, un gaz ne sera pas dissout instantannément dans un liquide.</p>
+            <p style="text-align: left;">On considère que la <b>Période</b> est le temps nécessaire pour atteindre une demi saturation et que la saturation est atteinte après 6 périodes.</p>
+        </section>
+        <section data-periodchart="true">
+            <h3>Loi de Henry</h3>
+            <p style="text-align: left">Réprésentation du temps de saturation d'un gaz dans un liquide</p>
+            <div style="margin: auto; display: inline-block" id="chart-period"></div>
+        </section>
+        <section>
+            <h3>Loi de Dalton</h3>
+            <p style="text-align: left;">Quels sont les applications à la plongée ?</p>
+            <ul class="fragment">
+                <li>L'explication de l'accident de décompression</li>
+                <li>Le calcul des tables de plongée</li>
+            </ul>
+        </section>
+        <section class="center">
+            <h1>Questions ?</h1>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script src="lib/js/highcharts/highcharts.js"></script>
+<script src="lib/js/highcharts/data.js"></script>
+<script src="lib/js/highcharts/drilldown.js"></script>
+
+<script>
+  // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    history: true,
+    controls: false,
+    progress: true,
+    center: false,
+
+    // The "normal" size of the presentation, aspect ratio will be preserved
+    // when the presentation is scaled to fit different resolutions. Can be
+    // specified using percentage units.
+    width: 960,
+    height: 700,
+
+    // Factor of the display size that should remain empty around the content
+    margin: 0.1,
+
+    // Bounds for smallest/largest possible scale to apply to content
+    minScale: 0.2,
+    maxScale: 1.5,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    math: {
+      mathjax: './lib/js/mathjax/MathJax.js',
+      config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+    },
+    dependencies: [
+      {src: 'plugin/markdown/marked.js'},
+      {src: 'plugin/markdown/markdown.js'},
+      {src: 'plugin/notes/notes.js', async: true},
+      {src: 'plugin/math/math.js', async: true},
+      {
+        src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+        hljs.initHighlightingOnLoad();
+      }
+      }
+    ]
+  });
+
+  Reveal.addEventListener('slidechanged', function (event) {
+    if (event.currentSlide.dataset.periodchart)
+      renderPeriodCharts()
+  });
+
+  Reveal.addEventListener('fragmentshown', function (event) {
+    if (event.fragment.dataset.airchart)
+      renderAirCharts()
+  });
+
+  // Make monochrome colors and set them as default for all pies
+  Highcharts.getOptions().plotOptions.pie.colors = (function () {
+    var colors = [],
+        base = Highcharts.getOptions().colors[0],
+        i;
+
+    for (i = 0; i < 10; i += 1) {
+      // Start out with a darkened base color (negative brighten), and end
+      // up with a much brighter color
+      colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+    }
+    return colors;
+  }());
+
+  renderAirCharts();
+  renderPeriodCharts();
+
+  function renderAirCharts() {
+    var chart = Highcharts.chart('chart-air', {
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+      },
+      title: {
+        text: "Composition de l'air"
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.y:.3f}%</b>'
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: true,
+            format: '<b>{point.name}</b>: {point.y:.3f} %',
+            style: {
+              color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+            },
+            connectorColor: 'silver'
+          }
+        }
+      },
+      series: [{
+        name: 'Proportions',
+        data: [
+          {name: 'Azote (N₂)', y: 78.080, drilldown: null},
+          {
+            name: 'Oxygène (O₂)',
+            y: 20.950,
+            sliced: true,
+            selected: true,
+            drilldown: null
+          },
+          {
+            name: 'Autres gaz',
+            y: 0.97,
+            drilldown: 'Autres gaz'
+          }
+        ]
+      }],
+      drilldown: {
+        series: [
+          {
+            name: 'Autres gaz',
+            id: 'Autres gaz',
+            data: [
+              ['Argon (Ar)', 0.934],
+              ['Gaz Carbonique (CO₂)', 0.033],
+              ['Gaz rares', 0.003]
+            ]
+          }]
+      },
+      credits: {
+        enabled: false
+      }
+    });
+  }
+
+  function renderPeriodCharts() {
+    var chart = Highcharts.chart('chart-period', {
+      chart: {
+        type: 'line'
+      },
+      title: {
+        text: 'Dissolution d\'un gaz dans un liquide'
+      },
+      xAxis: {
+        categories: ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9']
+      },
+      yAxis: {
+        title: {
+          text: 'Remplisage (%)'
+        }
+      },
+      plotOptions: {
+        line: {
+          dataLabels: {
+            enabled: true,
+            format: '{point.y:.2f} %'
+          },
+          enableMouseTracking: false
+        }
+      },
+      legend:{
+        enabled: false
+      },
+      series: [{
+        name: 'London',
+        data: [0, 50, 75, 87.5, 93.7, 96.9, 98.44, 99.22, 99.61, 99.805]
+      }],
+      credits: {
+        enabled: false
+      }
+    });
+  }
+
+  function renderSatDesatCharts() {
+    var chart = Highcharts.chart('chart-period', {
+      chart: {
+        type: 'line'
+      },
+      title: {
+        text: 'Dissolution d\'un gaz dans un liquide'
+      },
+      xAxis: {
+        categories: ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9']
+      },
+      yAxis: {
+        title: {
+          text: 'Remplisage (%)'
+        }
+      },
+      plotOptions: {
+        line: {
+          dataLabels: {
+            enabled: true,
+            format: '{point.y:.2f} %'
+          },
+          enableMouseTracking: false
+        }
+      },
+      legend:{
+        enabled: false
+      },
+      series: [{
+        name: 'London',
+        data: [0, 50, 75, 87.5, 93.7, 96.9, 98.44, 99.22, 99.61, 99.805]
+      }],
+      credits: {
+        enabled: false
+      }
+    });
+  }
+
+  // Build the chart
+
+</script>
+</body>
+</html>
