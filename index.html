@@ -192,8 +192,10 @@
         </section>
         <section>
             <h3>Loi de Henry</h3>
-            <p style="text-align: left;">Le processus de saturation (et de désaturation) prend du temps, un gaz ne sera pas dissout instantannément dans un liquide.</p>
-            <p style="text-align: left;">On considère que la <b>Période</b> est le temps nécessaire pour atteindre une demi saturation et que la saturation est atteinte après 6 périodes.</p>
+            <p style="text-align: left;">Le processus de saturation (et de désaturation) prend du temps, un gaz ne sera
+                pas dissout instantannément dans un liquide.</p>
+            <p style="text-align: left;">On considère que la <b>Période</b> est le temps nécessaire pour atteindre une
+                demi saturation et que la saturation est atteinte après 6 périodes.</p>
         </section>
         <section data-periodchart="true">
             <h3>Loi de Henry</h3>
@@ -204,9 +206,112 @@
             <h3>Loi de Dalton</h3>
             <p style="text-align: left;">Quels sont les applications à la plongée ?</p>
             <ul class="fragment">
-                <li>L'explication de l'accident de décompression</li>
+                <li>Cause de l'accident de décompression</li>
                 <li>Le calcul des tables de plongée</li>
             </ul>
+        </section>
+        <section>
+            <h3>Loi de Dalton</h3>
+            <p style="font-size: 20px;">Alors qu'il était à saturation, Un plongeur se retrouve à 40m...</p>
+            <p style="text-align: left; font-size: 20px;">Quel sera la pression d'azote ? <b class="fragment" data-fragment-index="1">4 bar</b></p>
+            <p style="text-align: left; font-size: 20px;">Quel sera la tension d'azote ? <b class="fragment" data-fragment-index="2">0.8 bar</b></p>
+            <p class="fragment" style="text-align: left; font-size: 20px;" data-fragment-index="2">Quel sera la tension après chaque période ?</p>
+            <table class="fragment" style="margin-bottom: 20px; font-size: 25px" data-fragment-index="2">
+                <thead>
+                <tr>
+                    <th>Période</th>
+                    <th>Pression Azote</th>
+                    <th>Tension Azote</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>P1</td>
+                    <td><span class="fragment" data-fragment-index="3">4 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="3">2.6 bar</span></td>
+                </tr>
+                <tr>
+                    <td>P2</td>
+                    <td><span class="fragment" data-fragment-index="4">4 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="4">3.3 bar</span></td>
+                </tr>
+                <tr>
+                    <td>P3</td>
+                    <td><span class="fragment" data-fragment-index="5">4 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="5">3.65 bar</span></td>
+                </tr>
+                <tr>
+                    <td>P4</td>
+                    <td><span class="fragment" data-fragment-index="6">4 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="6">3.825 bar</span></td>
+                </tr>
+                <tr>
+                    <td>P5</td>
+                    <td><span class="fragment" data-fragment-index="7">4 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="7">3.9125 bar</span></td>
+                </tr>
+                <tr>
+                    <td>P6</td>
+                    <td><span class="fragment" data-fragment-index="8">4 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="8">3.95625 bar</span></td>
+                </tr>
+                </tbody>
+            </table>
+            <p class="fragment" data-fragment-index="8" style="font-size: 25px;">La tension va augmenter progressivement pour tendre vers
+                l'équilibre.</p>
+        </section>
+        <section>
+            <h3>Loi de Dalton</h3>
+            <p style="font-size: 20px;">Que se passe-t-il lorsque le plongeur remonte ? supposons
+                qu'après avoir séjourné l'équivalent de 3 périodes à 40m, il se retrouve à 2m50 ...</p>
+
+            <p style="text-align: left; font-size: 20px;">Quel sera la pression d'azote ? <b class="fragment" data-fragment-index="1">1 bar</b></p>
+            <p style="text-align: left; font-size: 20px;">Quel sera la tension d'azote ? <b class="fragment" data-fragment-index="2">3.65 bar</b></p>
+
+            <p class="fragment" style="text-align: left; font-size: 20px;" data-fragment-index="2">Quel sera la tension après chaque période ?</p>
+            <table class="fragment" data-fragment-index="2" style="margin-bottom: 20px; font-size: 25px">
+                <thead>
+                <tr>
+                    <th>Période</th>
+                    <th>Pression Azote</th>
+                    <th>Tension Azote</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>P1</td>
+                    <td><span class="fragment" data-fragment-index="3">1 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="3">2.325 bar</span></td>
+                </tr>
+                <tr>
+                    <td>P2</td>
+                    <td><span class="fragment" data-fragment-index="4">1 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="4">1.6625 bar</span></td>
+                </tr>
+                <tr>
+                    <td>P3</td>
+                    <td><span class="fragment" data-fragment-index="5">1 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="5">1.331 bar</span></td>
+                </tr>
+                <tr>
+                    <td>P4</td>
+                    <td><span class="fragment" data-fragment-index="6">1 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="6">1.166 bar</span></td>
+                </tr>
+                <tr>
+                    <td>P5</td>
+                    <td><span class="fragment" data-fragment-index="7">1 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="7">1.083 bar</span></td>
+                </tr>
+                <tr>
+                    <td>P6</td>
+                    <td><span class="fragment" data-fragment-index="8">1 bar</span></td>
+                    <td><span class="fragment" data-fragment-index="8">1.041 bar</span></td>
+                </tr>
+                </tbody>
+            </table>
+            <p class="fragment" data-fragment-index="8" style="font-size: 25px">La tension va diminuer progressivement pour tendre vers
+                l'équilibre.</p>
         </section>
         <section class="center">
             <h1>Questions ?</h1>
@@ -376,7 +481,7 @@
           enableMouseTracking: false
         }
       },
-      legend:{
+      legend: {
         enabled: false
       },
       series: [{
@@ -414,7 +519,7 @@
           enableMouseTracking: false
         }
       },
-      legend:{
+      legend: {
         enabled: false
       },
       series: [{
